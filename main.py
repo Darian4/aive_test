@@ -91,6 +91,8 @@ class VideoManager:
 
 
 if __name__ == '__main__':
+    if not os.path.exists(OUTPUT_DIR_PATH):
+        os.makedirs(OUTPUT_DIR_PATH)
     for root, _, files in os.walk(INPUT_DIR_PATH):
         for name in files:
             file_path = os.path.join(root, name)
